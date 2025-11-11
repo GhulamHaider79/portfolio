@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+body{
+    background-color: rgb(1, 1, 0);
+    color: #fff;
+    font-family: "Saira", sans-serif;
+
+}
+@theme {
+  --color-primary: #4f46e5;
+  --color-secondary: #14b8a6;
+  --color-accent: #f97316;
+}
+
+/* Optional: Dark mode variables */
+.dark {
+  --color-primary: #818cf8;
+  --color-secondary: #2dd4bf;
+  --color-accent: #fb923c;
+}
+.btn {
+    background-color: #fb923c;
+    width: 5.5rem;
+   height: 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+     border: 01px solid;
+    
+}
+.btnTransparent {
+   border: 01px solid;
+    width: 5.5rem;
+    height: 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #818cf8;
+  white-space: nowrap;
+  width: 0;
+  animation: 
+    typing 3.5s steps(20, end) forwards, /* typing stays visible */
+    blink-caret .6s step-end 5;}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15ch;  /* Length of your text */
+  }
+}
+
+@keyframes blink-caret {
+  from, to {border-color: transparent;}
+  50% {
+    border-color: #818cf8;
+  }
+}
