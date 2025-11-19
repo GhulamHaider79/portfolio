@@ -1,17 +1,17 @@
 import React from 'react'
 
+import Services from './Services'
+import HeroSection from '../componants/HeroSection'
+
+
+
 const Home = () => {
   return (
     <div>
-      <div>
-      Home
-
-      </div>
-    <div className='flex'>
-       <h1 className="text-2xl  typewriter">
-      I am a <span className='text-accent'>freelancer</span>
-    </h1>
-    </div>
+     
+      <HeroSection />
+    
+    <Services />
     </div>
   )
 }

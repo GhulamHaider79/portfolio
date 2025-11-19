@@ -20,22 +20,35 @@ body{
   --color-accent: #fb923c;
 }
 .btn {
-    background-color: #fb923c;
+    background-color: #f97316;
     width: 5.5rem;
-   height: 2rem;
+   height: 2.5rem;
     border-radius: 5px;
     font-weight: bold;
      border: 01px solid;
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     transition: background-color 0.3s ease, color 0.3s ease;
+    
     
 }
+
+
 .btnTransparent {
    border: 01px solid;
     width: 5.5rem;
-    height: 2rem;
+    height: 2.5rem;
     border-radius: 5px;
     font-weight: bold;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 .typewriter {
   overflow: hidden;
@@ -51,7 +64,7 @@ body{
     width: 0;
   }
   to {
-    width: 15ch;  /* Length of your text */
+    width: 13ch;  /* Length of your text */
   }
 }
 
