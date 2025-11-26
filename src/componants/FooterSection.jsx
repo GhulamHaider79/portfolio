@@ -22,39 +22,48 @@ export default function FooterSection() {
           <h3 className="text-xl font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <Link
-                to="/"
+              <a
+                href="#home"
                 className="hover:text-accent transition"
               >
                 Home
-              </Link>
+              </a>
+            </li>
+
+             <li>
+              <a
+                href="#skills"
+                className="hover:text-accent transition"
+              >
+                Skills
+              </a>
             </li>
 
             <li>
-              <Link
-                to="/services"
+              <a
+                href="#services"
                 className="hover:text-accent transition"
               >
                 Services
-              </Link>
+              </a>
             </li>
 
             <li>
-              <Link
-                to="/about"
+              <a
+                href="#about"
                 className="hover:text-accent transition"
               >
                 About
-              </Link>
+              </a>
             </li>
 
             <li>
-              <Link
-                to="/contact"
+              <a
+                href="#contact"
                 className="hover:text-accent transition"
               >
                 Contact
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
