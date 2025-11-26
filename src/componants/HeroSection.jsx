@@ -13,7 +13,7 @@ function HeroSection() {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className='w-full mb-4 mt-28 md:mt-36 lg:mt-0 md:h-screen lg:flex gap-9 md:gap-0 justify-center items-center'
+        className='w-full mb-4 md:py-12 lg:py-0 md:h-screen lg:flex gap-9 md:gap-0 justify-center items-center'
 
       >
         {/* // left side contant */}
