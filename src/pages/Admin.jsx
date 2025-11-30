@@ -4,7 +4,7 @@ import { FiMenu, FiPlus, FiTrash2, FiEdit, FiSettings, FiMail, FiGrid } from "re
 import { db, auth } from "../firebase/firebase"; 
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { collection, addDoc, getDocs, updateDoc, deleteDoc, doc, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc, getDocs, updateDoc, deleteDoc, doc, serverTimestamp, onSnapshot } from "firebase/firestore";
 
 export default function Admin() {
   const [openSidebar, setOpenSidebar] = useState(true);
