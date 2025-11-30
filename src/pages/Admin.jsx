@@ -18,19 +18,26 @@ export default function Admin() {
 
   // Load projects & messages from Firebase
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const projSnap = await getDocs(collection(db, "projects"));
-        setProjects(projSnap.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+  const projectsCol = collection(db, "projects");
+  const messagesCol = collection(db, "messages");
 
-        const msgSnap = await getDocs(collection(db, "messages"));
-        setMessages(msgSnap.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
+  // Real-time listener for projects
+  const unsubscribeProjects = onSnapshot(projectsCol, snapshot => {
+    setProjects(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+  });
+
+  // Real-time listener for messages
+  const unsubscribeMessages = onSnapshot(messagesCol, snapshot => {
+    setMessages(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+  });
+
+  // Clean up listeners on unmount
+  return () => {
+    unsubscribeProjects();
+    unsubscribeMessages();
+  };
+}, []);
+
 
   const openAddModal = () => {
     setEditingProject(null);
