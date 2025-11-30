@@ -5,6 +5,7 @@ import About from '../componants/AboutMe'
 import HeroSection from '../componants/HeroSection'
 import SkillSection from '../componants/SkillSection'
 import Contact from '../componants/ContactSection'
+import ProjectsSection from '../componants/ProjectsSection'
 
 
 
@@ -13,7 +14,7 @@ const Home = () => {
   return (
     <div>
 
-     <div id='home'>
+     <div id='home1'>
        <HeroSection />
      </div>
 
@@ -28,6 +29,10 @@ const Home = () => {
 
       <div id='services'>
  <Services />
+      </div>
+
+      <div id='projects'>
+        <ProjectsSection />
       </div>
 
     

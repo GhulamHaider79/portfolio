@@ -2,6 +2,7 @@ import { skills } from "../assets/assets.js";
 import { motion } from "framer-motion";
 
 export default function SkillSection() {
+  
   return (
     <motion.section 
         initial={{ y: 20, opacity: 0 }}

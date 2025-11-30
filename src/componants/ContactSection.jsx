@@ -1,7 +1,40 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+
+import { db } from "../firebase/firebase"; 
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function ContactSection() {
+ const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      await addDoc(collection(db, "messages"), {
+        name,
+        email,
+        message,
+        createdAt: serverTimestamp(),
+      });
+      setSuccess(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("Error adding message:", error);
+      alert("Failed to send message");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <motion.section
       initial={{ y: 20, opacity: 0 }}
@@ -56,15 +89,22 @@ export default function ContactSection() {
 
           {/* Right Side Form */}
           <motion.form
+          onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700"
           >
-            <div className="mb-5">
+            {success && (
+              <p className="mb-4 text-green-400">Message sent successfully!</p>
+            )}
+            
+              <div className="mb-5">
               <label className="text-gray-300 mb-2 block">Your Name</label>
               <input
                 type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="w-full p-3 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-accent outline-none"
                 placeholder="Enter your name"
               />
@@ -74,6 +114,8 @@ export default function ContactSection() {
               <label className="text-gray-300 mb-2 block">Your Email</label>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full p-3 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-accent outline-none"
                 placeholder="Enter your email"
               />
@@ -83,17 +125,21 @@ export default function ContactSection() {
               <label className="text-gray-300 mb-2 block">Your Message</label>
               <textarea
                 rows="5"
+                 value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="w-full p-3 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-accent outline-none"
                 placeholder="Write your message"
               ></textarea>
             </div>
 
             <button
-              type="submit"
+               type="submit"
+              disabled={loading}
               className="w-full bg-accent text-white py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition"
             >
-              Send Message
+             {loading ? "Sending..." : "Send Message"}
             </button>
+           
           </motion.form>
 
         </div>

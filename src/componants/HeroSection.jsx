@@ -30,18 +30,18 @@ function HeroSection() {
             </p>
           </div>
           <div className="flex gap-6 mt-4">
-            <Link
-              to="#"
+            <a
+              href="#contact"
               className='btn hover:bg-accent transition-colors duration-300 hover:text-black '
             >
               Hire Me
-            </Link>
-            <Link
-              to="#"
+            </a>
+            <a
+              href="#about"
               className='btnTransparent hover:bg-accent transition-colors duration-300 hover:text-black'
             >
               About Me
-            </Link>
+            </a>
           </div>
         </div>
 

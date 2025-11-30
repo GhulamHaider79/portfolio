@@ -67,3 +67,47 @@ export const services = [
         "Creating mobile-friendly, clean, and seamless user experiences for all devices.",
     },
   ];
+
+
+ export const projects = [
+{
+title: "Portfolio Website",
+desc: "A modern responsive portfolio built with React and Tailwind CSS.",
+tech: ["React", "Tailwind", "Framer Motion"],
+live: "#",
+github: "#",
+img: "https://images.unsplash.com/photo-1581091012184-4036f41b12c8?auto=format&fit=crop&w=400&q=80",
+},
+{
+title: "Quiz App",
+desc: "A Quiz App for Sylani Welfare trust.",
+tech: ["javaScript", "HTML5", "CSS"],
+live: "https://ghulamhaider79.github.io/saylani_student/",
+github: "https://github.com/GhulamHaider79/saylani_student.git",
+img: "https://via.placeholder.com/400x250",
+},
+{
+title: "Weather App",
+desc: "A real-time weather forecast app using OpenWeather API.",
+tech: ["React", "API", "CSS"],
+live: "https://ghulamhaider79.github.io/weatherCheckingApp/",
+github: "https://github.com/GhulamHaider79/weatherCheckingApp.git",
+img: "https://via.placeholder.com/400x250",
+},
+{
+title: "Doctor Appointment UI",
+desc: "Frontend UI for an doctor appointment website.",
+tech: ["React", "Tailwind"],
+live: "https://healthcare-cksf.vercel.app/",
+github: "https://github.com/GhulamHaider79/healthcare.git",
+img: "https://via.placeholder.com/400x250",
+},
+{
+title: "Restaurant UI",
+desc: "Develop a UI for Restaurant using HTML, CSS.",
+tech: ["HTML5", "CSS"],
+live: "https://ghulamhaider79.github.io/foodwagon/",
+github: "https://github.com/GhulamHaider79/foodwagon.git",
+img: "https://via.placeholder.com/400x250",
+},
+];

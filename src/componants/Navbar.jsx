@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-;
-import { HiMenu, HiX } from "react-icons/hi"
+import { NavLink } from "react-router-dom";
+import { HiMenu, HiX } from "react-icons/hi";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -29,14 +29,14 @@ function Navbar() {
         }`}>
         <div className='contianer flex justify-between p-4'>
           <div>
-            <h1 className="text-2xl">
+            < NavLink to="/" className="text-2xl">
               Code
               <span className='text-accent'>@Me</span>
-            </h1>
+            </ NavLink>
           </div>
           <nav className='hidden md:flex gap-5 '>
             <a
-              href="#home"
+              href="#home1"
              className="
   relative inline-block transition-all duration-300
   after:content-[''] after:absolute after:left-0 after:-bottom-1
@@ -81,6 +81,18 @@ function Navbar() {
             >
               Services
             </a>
+ <a
+              href="#projects"
+             className="
+  relative inline-block transition-all duration-300
+  after:content-[''] after:absolute after:left-0 after:-bottom-1
+  after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300
+  hover:text-accent hover:after:w-full"
+            >
+              Projects
+            </a>
+
+
 
             <a
               href="#contact"
@@ -112,7 +124,7 @@ function Navbar() {
         <nav className={`flex flex-col items-center gap-7 h-screen bg-[#0f0f0f] text-white md:hidden transition-all duration-300 ${open ? "flex" : "hidden"
           }`}>
           <a
-            href="#home"
+            href="#home1"
 
            className="
   relative inline-block transition-all duration-300
@@ -160,7 +172,17 @@ function Navbar() {
             Services
           </a>
 
-
+<a
+            href="#projects"
+           className="
+  relative inline-block transition-all duration-300
+  after:content-[''] after:absolute after:left-0 after:-bottom-1
+  after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300
+  hover:text-accent hover:after:w-full"
+            onClick={() => setOpen(!open)}
+          >
+            Projects
+          </a>
 
           <a
             href="#contact"
