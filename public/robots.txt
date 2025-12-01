@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-nine-fawn-igotbe6v7l.vercel.app/sitemap.xml
