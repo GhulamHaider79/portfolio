@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <>
-      <div className={`sticky top-0 z-50 transition-colors duration-500 ${scrolled ? "bg-[#0f0f0f] opacity-95" : "bg-transparent "
+      <div className={`sticky top-0 z-50 transition-colors duration-500 ${scrolled ? "bg-[#0f0f0f] opacity-100 md:opacity-95" : "bg-transparent "
         }`}>
         <div className='contianer flex justify-between p-4'>
           <div>
@@ -120,8 +120,10 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div>
-        <nav className={`flex flex-col items-center gap-7 h-screen bg-[#0f0f0f] text-white md:hidden transition-all duration-300 ${open ? "flex" : "hidden"
+      
+        <nav className={`flex flex-col items-center gap-7 
+        h-screen bg-[#0f0f0f] text-white md:hidden 
+        transition-all duration-300 ${open ? "fixed top-16 left-0 w-full  z-45" : "hidden"
           }`}>
           <a
             href="#home1"
@@ -144,6 +146,7 @@ function Navbar() {
   after:content-[''] after:absolute after:left-0 after:-bottom-1
   after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300
   hover:text-accent hover:after:w-full"
+  onClick={ () => setOpen(!open)}
           >
             Skills
           </a>
@@ -196,7 +199,7 @@ function Navbar() {
             Contact
           </a>
         </nav>
-      </div>
+      
 
     </>
   )

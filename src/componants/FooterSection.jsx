@@ -20,7 +20,7 @@ export default function FooterSection() {
         {/* Quick Links */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-4">Quick Links</h3>
-          <ul className="space-y-2">
+          <ul className="space-y-2 ">
             <li>
               <a
                 href="#home"
@@ -73,19 +73,34 @@ export default function FooterSection() {
           <h3 className="text-xl font-semibold text-white mb-4">Follow Me</h3>
           <div className="flex space-x-5 text-2xl">
 
-            <a href="#" className="hover:text-accent transition">
+            <a 
+             target="_blank"
+  rel="noopener noreferrer"
+            href="https://www.facebook.com/share/1Ajmv2Fyy5/" className="hover:text-accent transition">
               <FaFacebook />
             </a>
 
-            <a href="https://github.com/" className="hover:text-accent transition">
+            <a 
+             target="_blank"
+  rel="noopener noreferrer"
+            href="https://github.com/GhulamHaider79" 
+            className="hover:text-accent transition">
               <FaGithub />
             </a>
 
-            <a href="#" className="hover:text-accent transition">
+            <a 
+             target="_blank"
+  rel="noopener noreferrer"
+            href="www.linkedin.com/in/ghulam-haider-cpl11201" 
+            className="hover:text-accent transition">
               <FaLinkedin />
             </a>
 
-            <a href="#" className="hover:text-accent transition">
+            <a 
+             target="_blank"
+  rel="noopener noreferrer"
+            href="https://www.instagram.com/haider11201?igsh=MWd4eHZhbDlwcmlraQ==" 
+            className="hover:text-accent transition">
               <FaInstagram />
             </a>
 

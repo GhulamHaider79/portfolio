@@ -57,12 +57,12 @@ export default function ContactSection() {
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl font-semibold text-white mb-6"
+              className="text-3xl font-semibold text-white mb-6 text-center md:text-left"
             >
               Let's Connect
             </motion.h3>
 
-            <p className="text-gray-300 leading-7 mb-6">
+            <p className="text-gray-300 leading-7 mb-6 text-center md:text-left">
               If you have any project in mind, want to collaborate, or just want 
               to say hello — feel free to reach out. I’m always excited to talk 
               about new opportunities and ideas.
@@ -80,7 +80,7 @@ export default function ContactSection() {
                 <p className="text-gray-300">+92 3422109898</p>
               </div>
 
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center   space-x-4">
                 <FaMapMarkerAlt className="text-accent text-2xl" />
                 <p className="text-gray-300">Lahore, Punjab, Pakistan</p>
               </div>

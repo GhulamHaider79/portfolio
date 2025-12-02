@@ -64,7 +64,7 @@ body{
     width: 0;
   }
   to {
-    width: 15ch;  /* Length of your text */
+    width: 25ch;  /* Length of your text */
   }
 }
 
