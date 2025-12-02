@@ -23,7 +23,7 @@ function HeroSection() {
           </div>
           <div className="flex flex-col w-full gap-5  items-center lg:items-start  lg:w-[75%]">
             <h1 className=" md:text-2xl lg:text-3xl xl:text-4xl typewriter">
-              Full Stack <span className="text-accent">MERN Stack Developer</span>
+              Full Stack <span className="text-accent">Developer</span>
             </h1>
             <p className='w-full md:w-[75%]  lg:w-full'>
               "Crafting interactive front-end experiences and building efficient back-end architectures, I turn ideas into reliable, modern web applications."
